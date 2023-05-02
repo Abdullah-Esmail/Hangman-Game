@@ -1,0 +1,154 @@
+.row {
+  display: flex;
+}
+
+hr {
+  border: 1px solid rgb(8, 4, 4);
+}
+
+.hangman-draw {
+  flex: 1;
+  background-color: #F8F8F8;
+  padding: 20px;
+  height: 324px;
+}
+
+.hangman-draw .draw {
+  width: 60px;
+  height: 280px;
+  border-bottom: 4px solid #222;
+  position: relative;
+  margin: auto;
+  left: -60px;
+}
+
+.hangman-draw .stand {
+  position: absolute;
+  width: 4px;
+  background-color: #222;
+  height: 100%;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.hangman-draw .hang:before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  background-color: #222;
+  width: 100px;
+  left: 30px;
+  top: 15px;
+}
+
+.hangman-draw .hang:after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  background-color: #222;
+  left: 130px;
+  top: 15px;
+}
+
+.hangman-draw .rope {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  left: 95px;
+  top: 45px;
+  border: 4px dashed #222;
+}
+
+.hangman-draw .man .head {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #222;
+  position: absolute;
+  left: 105px;
+  top: 55px;
+}
+
+.hangman-draw .man .body {
+  position: absolute;
+  background-color: #222;
+  width: 4px;
+  height: 110px;
+  top: 102px;
+  left: 130px;
+}
+
+.hangman-draw .man .hands:before {
+  left: 85px;
+  transform: rotate(30deg);
+}
+
+.hangman-draw .man .hands:after {
+  left: 130px;
+  transform: rotate(-30deg);
+}
+
+.hangman-draw .man .hands:before,
+.hangman-draw .man .hands:after {
+  content: '';
+  width: 50px;
+  position: absolute;
+  height: 4px;
+  background-color: #222;
+  top: 140px;
+}
+
+.hangman-draw .man .legs:before {
+  left: 85px;
+  transform: rotate(-30deg);
+}
+
+.hangman-draw .man .legs:after {
+  left: 130px;
+  transform: rotate(30deg);
+}
+
+.hangman-draw .man .legs:before,
+.hangman-draw .man .legs:after {
+  content: '';
+  width: 50px;
+  position: absolute;
+  height: 4px;
+  background-color: #222;
+  top: 220px;
+}
+
+.wrong-1.draw {
+  display: block;
+}
+
+.wrong-2 .stand {
+  display: block;
+}
+
+.wrong-3 .hang {
+  display: block;
+}
+
+.wrong-4 .rope {
+  display: block;
+}
+
+.wrong-5 .man,
+.wrong-5 .head {
+  display: block;
+}
+
+.wrong-6 .man .body {
+  display: block;
+}
+
+.wrong-7 .man .hands {
+  display: block;
+}
+
+.wrong-8 .man .legs {
+  display: block;
+}
